@@ -1,0 +1,401 @@
+/*-----DOCUMENT-----*/
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+/*Variables*/
+:root {
+  --main-color: #0065fc;
+  --secondary-color: #deebff;
+  --bg-color: #f2F2F2;
+  --l-font-size: 22px;
+  --m-font-size: 18px;
+  --s-font-size: 16px;
+  --xs-font-size: 14px;
+  --mobile-font-size: 11px;
+}
+/*Global*/
+* {
+  font-family: "Raleway", cursive;
+  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 0.25em; /*Pour la Bordure du menu de nav*/
+  font-size: var(--s-font-size);
+}
+/*HTML Elements*/
+section{
+  margin: 1em 0;
+}
+p{
+  margin: 1em 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+i {
+  /* margin-right:0.5em; */ /*Remplacer par un gap*/
+  color: var(--main-color);
+}
+input {
+  border-style: none;
+}
+h2{
+  font-size: var(--l-font-size);
+}
+h3{
+  font-size: var(--s-font-size);
+}
+/*Utils Class*/
+.boldText {
+  font-weight: 900;
+}
+.flexHorizontal {
+  display: flex;
+  flex-direction: row;
+}
+.flexVertical {
+  display: flex;
+  flex-direction: column;
+}
+.flexSpaceBetween {
+  justify-content: space-between;
+}
+body .hidden {
+  display: none; /*Pour masquer l'icone de loupe en affichage desktop*/
+}
+/*-----HEADER-----*/
+header {
+  padding: 2.5em 0; /*Pour la border du menu nav*/
+}
+header img {
+  width: 5%;
+}
+/*Nav*/
+nav a {
+  padding: 2.5em;
+  border-top: 0.25em solid var(--bg-color);
+}
+nav a:hover{
+  color: var(--main-color);
+  border-top: 0.25em solid var(--main-color);
+}
+/*-----SEARCH-----*/
+/*SearchBar*/
+.adressBar {
+  height: 3em;
+}
+.adressBar i,
+.adressBar input,
+.adressBar a {
+  height: 100%;
+  padding: 1em;
+}
+.adressBar i {
+  background-color: var(--bg-color);
+  color: black;
+  border-radius: 1em 0 0 1em;
+  margin: 0;
+}
+.adressBar input {
+  font-size: var(--m-font-size);
+  border-top: 0.1em solid var(--bg-color);
+  border-bottom: 0.1em solid var(--bg-color);
+}
+.adressBar a {
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 0 1em 1em 0;
+}
+/*Filters*/
+.filters {
+  align-items: center;
+  margin: 2em 0;
+  gap: 2em;
+}
+.filters h2{
+  font-size: var(--m-font-size);
+}
+.filterList {
+  /* flex-wrap: wrap; */
+  gap: 2em;
+}
+.filterList li {
+  border: 0.25em solid var(--bg-color);
+  border-radius: 2em;
+  padding: 1em;
+}
+.filterList a{
+  display:flex;
+  gap: 0.5em;
+}
+.filterList li:hover {
+  background-color: var(--secondary-color);
+}
+/*Infos*/
+.info {
+  font-size: var(--s-font-size);
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.1em solid var(--bg-color);
+  border-radius: 1em;
+}
+.infoParagraph{
+  margin:0;
+}
+/*-----HEBERGEMENT-----*/
+/*Wrapper*/
+.hebergementSection {
+  gap: 2em;
+}
+/*Boxes*/
+.hebergementDiv {
+  background-color: var(--bg-color);
+  border-radius: 1em;
+  padding: 2em;
+}
+.hebergementList {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+  margin: 1em 0;
+}
+/*Articles*/
+.hebergementSection article {
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
+.mainHebergement a {
+  width: 30%;
+}
+.popularHebergement article {
+  height: 10em;
+}
+/*Articles Content*/
+.hebergementSection ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 0.25em;
+}
+.mainHebergement article img {
+  border-radius: 1em 1em 0 0;
+  height: 10em;
+  object-fit: cover;
+  margin: 0.25em;
+}
+.popularHebergement article img {
+  border-radius: 1em 0 0 1em;
+  width: 8em;
+  object-fit: cover;
+  margin: 0.25em;
+}
+.articleInfos {
+  justify-content: space-between; /*Impossible d'utiliser la classe utils ????*/
+  padding: 0.5em;
+}
+.articleInfos ul,
+.articleText p {
+  margin: 0.5em 0;
+}
+.starEmpty {
+  color: var(--bg-color);
+}
+/*-----ACTIVITIES-----*/
+.activitiesSection div {
+  margin: 1em 0;
+}
+.activitiesSection a {
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  width: 22%;
+}
+.activitiesSection img {
+  height: 25em;
+  border-radius: 1em 1em 0 0;
+  object-fit: cover;
+}
+.activitiesSection h3{
+  padding: 1em;
+}
+/*-----FOOTER-----*/
+footer {
+  background-color: var(--bg-color);
+  padding: 2em 3em;
+  gap: 2em;
+  margin-top: 2em;
+}
+footer div {
+  flex-grow: 1;
+  width: calc(1/3*100%);
+}
+footer h2{
+  font-size: var(--m-font-size);
+}
+footer div ul {
+  padding: 0;
+}
+footer li {
+  margin: 0.75em 0;
+}
+
+/*-----MEDIA QUERRIES-----*/
+/*Tablets*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /*DOCUMENT*/
+  body {
+    padding: 0 2em;
+  }
+  /*HEADER*/
+  header img {
+    width: 10%;
+    margin: 1em 0;
+  }
+  /*SEARCH*/
+  .filters, .filterList{
+    gap: 1em;
+  }
+  .filterList li{
+    padding: 0.5em;
+  }
+  /*HEBERGEMENT*/
+  .hebergementSection {
+    flex-direction: column;
+  }
+  .hebergementSection p{
+    font-size: 14px;
+  }
+  .mainHebergement article img {
+    height: 7em;
+  }
+  .popularHWrapper {
+    flex-direction: row;
+    gap:0;
+  }
+  .popularHWrapper a {
+    width: 31%;
+  }
+  .popularHebergement article img {
+    width: 4em;
+  }
+  /*ACTIVITIES*/
+  .activitiesSection img {
+    height: 15em;
+  }
+}
+@media screen and (max-width: 768px) {
+  /*DOCUMENT*/
+  .searchSection, .hebergementDiv, .activitiesSection, .footer{
+    padding: 1em;
+  }
+  /*HEADER*/
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  header img {
+    width: 15%;
+    margin: 1em 0;
+  }
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  header a {
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+    border-top: none;
+    border-bottom: 0.25em solid var(--bg-color);
+  }
+  header a:hover {
+    color: var(--main-color);
+    border-top: none;
+    border-bottom: 0.25em solid var(--main-color);
+  }
+  /*SEARCH*/
+  .adressBar input{
+    width:75%;
+    flex-grow: 1;
+  }
+  .adressBar a {
+    display: none;
+  }
+  .adressBar .fa-magnifying-glass {
+    display: unset;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 0 0.5em 0.5em 0;
+  }
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+  .filterList {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+    gap:0.5em;
+  }
+  .filterList li {
+    width: 45%;
+    font-size: var(--mobile-font-size);
+  }
+  .filterList a{
+    align-self: center;
+  }
+  .infoParagraph{
+    display: flex;
+  }
+  /*HEBERGEMENT*/
+  .hebergementSection {
+    flex-direction: column-reverse;
+  }
+  .mainHebergement {
+    background-color: white;
+  }
+  .mainHebergement .hebergementList {
+    flex-direction: column;
+  }
+  .mainHebergement a {
+    width: 100%;
+  }
+  .showMore {
+    display: none;
+  }
+  /*ACTIVITIES*/
+  .activitiesSection div{
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+  .activitiesSection a{
+    width: 100%;
+    margin: 1em 0;
+    padding: 0;
+  }
+  .activitiesSection img{
+    height: 10em;
+  }
+  /*FOOTER*/
+  .footer{
+    flex-direction: column;
+  }
+  footer div{
+    margin:0.5em;
+    width: 100%;
+  }
+}
